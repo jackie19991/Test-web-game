@@ -1,0 +1,27 @@
+<html>
+<body>
+<script src="JS/Stage.js"></script>
+<script src="JS/Scene.js"></script>
+<script src="JS/Spirit.js"></script>
+<script src="JS/Spirit/Role.js"></script>
+<script src="JS/Spirit/Bullet.js"></script>
+<script src="JS/Spirit/Role/Play.js"></script>
+<canvas id="can" width="500px" height="500px"></canvas>
+	<script>
+	var can=document.getElementById("can");
+	// can.getContext("2d").fillRect(0,0,10,10);
+	var stage=new Stage(can);
+	var scene=new Scene();
+	var role=new Role(20,20,50,60);
+	play=new Play(300,250,20,20);
+	scene.replacePlay(play);
+	scene.addspirit(role);
+	stage.replace(scene);
+	// document.onkeydown=function(event){
+	// 	if(event.keyCode==65){ // 按 Esc
+	// 		alert("a")
+	// 	}}
+</script>
+</body>
+
+</html>
